@@ -1,0 +1,40 @@
+Central Limit Theorem
+========================================================
+author: Shantonob Ghosh
+date: 3/17/2016
+
+CLT Definition
+========================================================
+
+In probability theory, the central limit theorem (CLT) states that, given certain conditions, the arithmetic mean of a sufficiently large number of iterates of independent random variables, each with a well-defined expected value and well-defined variance, will be approximately normally distributed, regardless of the underlying distribution
+
+What the app does
+========================================================
+
+This app is designed to explore and simulate the central limit theorem.
+sliders can be set to various parameters and te tendency to central limit can be observed withthe plots.
+According to the Central Limit Theorem (CLT), the distribution of sample means 
+          (the sampling distribution) should be nearly normal. The mean of 
+          the sampling distribution should be approximately equal to the population mean
+          and the standard error (the standard deviation of
+          sample means) should be approximately equal to the SD of the population divided by square root of
+          sample size
+
+
+Alternative statements of the theorem
+========================================================
+
+Density functions :
+The density of the sum of two or more independent variables is the convolution of their densities (if these densities exist). Thus the central limit theorem can be interpreted as a statement about the properties of density functions under convolution: the convolution of a number of density functions tends to the normal density as the number of density functions increases without bound. These theorems require stronger hypotheses than the forms of the central limit theorem given above. Theorems of this type are often called local limit theorems. 
+
+
+Example
+================================================================
+
+```{r, echo=FALSE}
+
+x=rnorm(500,mean=100,sd=10)
+hist(x,prob=TRUE,ylim=c(0,0.04))
+curve(dnorm(x,mean=100,sd=10),70,130,add=TRUE,lwd=2,col="red")
+
+```
